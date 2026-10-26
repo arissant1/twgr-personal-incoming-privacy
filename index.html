@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>Privacy Policy | TWGR Personal Incoming GR107</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; line-height:1.65; }
+    body {max-width: 850px; margin: 0 auto; padding: 44px 22px 90px; background:#f8fafc; color:#162034; }
+    header {border-bottom: 2px solid #dce4ee; margin-bottom: 30px; padding-bottom: 20px;}
+    h1 {font-size: clamp(1.7rem, 4vw, 2.35rem); line-height:1.15; margin:0 0 12px;} h2{font-size:1.15rem;margin-top:31px}
+    .tag {color:#476485;font-weight:700;letter-spacing:.08em;font-size:.74rem;text-transform:uppercase}
+    .muted {color:#52637c;font-size:.95rem}
+    p,li{font-size:1rem} a{color:#1766b1; overflow-wrap:anywhere}
+    .notice {background:#eef5fe;border:1px solid #c7dbf4;padding:14px 18px;border-radius:9px}
+    @media (prefers-color-scheme:dark) {body{background:#0d1522;color:#e5ecf8} header{border-color:#32445d}.muted,.tag{color:#a5bad7}.notice{background:#172941;border-color:#3b5572}a{color:#91c8ff}}
+  </style>
+</head>
+<body>
+  <header>
+    <p class="tag">TWGR AI AT · Chrome Extension</p>
+    <h1>Privacy Policy — TWGR Personal Incoming GR107</h1>
+    <p class="muted">Last updated: October 26, 2026 · Extension version: 1.0.5</p>
+  </header>
+
+  <p>TWGR Personal Incoming GR107 helps authorized users collect incoming-attack information from an active Tribal Wars GR107 game session and deliver reports to a user-configured collector for display in designated Discord channels. The extension is intended only for game accounts the user is authorized to access.</p>
+
+  <h2>1. Data accessed and processed</h2>
+  <p>To perform its reporting function, the extension processes the configured account label, game account name and game account ID, Discord server ID, selected collector address, timestamps, and incoming-attack information visible in the game. Attack information can include village names and coordinates, names of other game players, source and target village details, command identifiers or descriptions, recognition information, and arrival times.</p>
+  <p>The extension also stores an administrator-provided authorization secret and settings in Chrome's local extension storage. The secret is used to produce HMAC authentication signatures and is not intentionally sent to the collector as a plaintext secret.</p>
+
+  <h2>2. How the data is collected and used</h2>
+  <p>When the user enables the extension, a scheduled scan attempts to read the incoming-attack pages of an open, authenticated GR107 browser tab approximately every 20 minutes. The user may also initiate a scan manually or pause scanning. Data is used only to provide per-account attack reports, identify newly observed incoming attacks, and show reporting history and status.</p>
+  <p>The extension does not intentionally collect or transmit account passwords, session cookies, general browsing history, health information, or financial information. It uses the existing authenticated game session to request the necessary GR107 pages.</p>
+
+  <h2>3. Transmission and sharing</h2>
+  <p>Scan results are transmitted to the collector endpoint explicitly configured by the user or administrator. The collector processes and stores reports, then publishes or updates reports in administrator-designated Discord channels. Report visibility depends on that Discord server's channel permissions. The collector's hosting provider and Discord may process data as needed to operate these services.</p>
+  <p>Collector connections require HTTPS except when the user deliberately configures a local endpoint at localhost or 127.0.0.1. Requests to the collector are authenticated with signed headers.</p>
+  <p>Data is not sold, shared for advertising, used for personalized advertising, or used to assess creditworthiness.</p>
+
+  <h2>4. Storage and retention</h2>
+  <p>Configuration, scan status, and the authorization secret are kept in Chrome local extension storage. The collector stores current incoming records and historical scan information in its database, and Discord stores the reports posted to its channels. No fixed automatic deletion period is represented here: server-side records and Discord messages may remain until the administrator deletes them. A user who wants collector-side or Discord records removed should contact the system administrator.</p>
+
+  <h2>5. Security and user controls</h2>
+  <p>Users can pause the extension and remove it to stop future scans. Deleting the extension does not itself delete reports already stored in the collector or Discord. Protect the collector authorization secret and configure Discord channel permissions to limit access to reports. No system can guarantee absolute security.</p>
+
+  <h2>6. Limited Use</h2>
+  <p>Use of information obtained through Chrome APIs follows the Chrome Web Store User Data Policy, including its Limited Use requirements. The extension uses the data only to provide its disclosed reporting function and related security and reliability operations. It does not use this information to deliver advertisements, and human access to stored reports is limited to authorized administration and support, security, or legally required purposes as applicable.</p>
+
+  <h2>7. Contact and deletion requests</h2>
+  <p>To ask questions, request access to reports, or request deletion of records held by the collector, contact the TWGR AI AT system administrator at <strong>REPLACE_WITH_YOUR_CONTACT_EMAIL</strong>.</p>
+  <div class="notice"><strong>Publication note for the administrator:</strong> Replace REPLACE_WITH_YOUR_CONTACT_EMAIL with a real working support email address before publishing this page. Confirm that the information above matches actual deployment and administrator practices.</div>
+  <p class="muted">This extension is not affiliated with or endorsed by Tribal Wars or its publisher.</p>
+</body>
+</html>
